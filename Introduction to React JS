@@ -1,0 +1,11 @@
+🧠 What is React?
+React is a JavaScript library for building user interfaces (UIs), especially for single-page applications (SPAs).
+
+🏗️ Created by Facebook in 2013, React helps developers build fast, interactive websites using components and a virtual DOM.
+
+| Traditional JS/HTML/CSS               | React                                        |
+| ------------------------------------  | -------------------------------------------  |
+| -Manually updates the DOM             | -React automatically updates the DOM         |
+| -Messy code for dynamic UIs           | -Uses clean reusable components              |
+| -Hard to manage large apps            | -Easy to scale with components and state     |
+| -Performance issues with many updates | -Uses **Virtual DOM** for better performance |
