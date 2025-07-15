@@ -132,3 +132,66 @@ Loading a resource from a different domain, protocol, or port.
 | ----------------- | ------------------------------------------------------------ |
 | **CDN in React**  | Load external libraries quickly and reduce bundle size       |
 | **`crossorigin`** | Define whether to send credentials for cross-origin requests |
+
+### 📌 New Concepts
+# ⚛️ React Core Methods Explained
+
+This guide explains how `React.createElement`, `ReactDOM.createRoot`, and `.render()` work together to render UI in React without using JSX.
+
+---
+
+## 🧱 1. React.createElement()
+
+### ✅ What it does:
+Creates a **virtual DOM element** in memory. This is how JSX is compiled internally by React.
+
+### 🧪 Syntax:
+```js
+React.createElement(type, props, children);
+```
+### 🔹 Parameters:
+- type: The HTML tag or React component name (e.g., 'div', 'h1', MyComponent)
+
+- props: An object with HTML attributes or event handlers (e.g., { id: 'title' })
+
+- children: The inner content (text or nested elements)
+
+### 🧾 Example:
+```
+const heading = React.createElement(
+  "h1",
+  { id: "mainTitle", style: { color: "blue" } },
+  "Hello from React"
+);
+```
+### 🌱 2. ReactDOM.createRoot()
+## ✅ What it does:
+Creates a React root to manage the rendering of components into the actual DOM.
+
+## 🧪 Syntax:
+```
+const root = ReactDOM.createRoot(document.getElementById("root"));
+```
+## 📌 Purpose:
+- Required in React 18+ for concurrent rendering
+
+- Replaces the old ReactDOM.render() method
+
+### 🎯 3. root.render()
+## ✅ What it does:
+Renders your React element or component into the real DOM.
+
+## 🧪 Syntax:
+```
+root.render(ReactElementOrComponent);
+```
+## 🧾 Example:
+```
+root.render(heading); // Renders the heading element created earlier
+```
+### 📌Summary
+| Method                  | Purpose                                 |
+| ----------------------- | --------------------------------------- |
+| `React.createElement()` | Creates a virtual DOM element           |
+| `ReactDOM.createRoot()` | Prepares React to render in a container |
+| `root.render()`         | Renders the virtual DOM into real DOM   |
