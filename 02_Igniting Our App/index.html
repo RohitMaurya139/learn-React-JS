@@ -1,69 +1,18 @@
-// 📦 Importing core React libraries
-import React from "react";
-import ReactDOM from "react-dom/client";
 
-// 🏷️ Creating a single React element (<h1> tag with inline styling)
-const heading = React.createElement(
-  "h1", // Type of element
-  {
-    id: "headText", // Assigning an ID
-    style: {
-      color: "red",          // Text color
-      fontSize: "50px",      // Font size
-      textAlign: "center",   // Center-align the text
-    },
-  },
-  "Hello World! From React"  // Text content of <h1>
-);
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>React JS</title>
+</head>
+<body>
+  <!-- 🧱 Root element where React will render content -->
+  <div id="root"></div>
 
-// 🧱 Creating a nested structure of React elements
-const parent = React.createElement(
-  "div",                    // Parent <div> element
-  { id: "parent" },         // Assigning ID to parent
 
-  // 👶 Children elements as an array
-  [
-    // 🔹 First child <div> with two <h1> and <h2> headings
-    React.createElement(
-      "div",
-      { id: "child1", key: "child1" }, // ID and key for React's reconciliation
-      [
-        React.createElement(
-          "h1",
-          { key: "child1-h1" },
-          "Hi, I am First child of child1 Santosh pagal"
-        ),
-        React.createElement(
-          "h2",
-          { key: "child1-h2" },
-          "Hi, I am Second child of child1 kajal i love you"
-        ),
-      ]
-    ),
 
-    // 🔹 Second child <div> with two <h1> and <h2> headings
-    React.createElement(
-      "div",
-      { id: "child2", key: "child2" }, // ID and key
-      [
-        React.createElement(
-          "h1",
-          { key: "child2-h1" },
-          "Hi, I am First child of child2"
-        ),
-        React.createElement(
-          "h2",
-          { key: "child2-h2" },
-          "Hi, I am Second child of child2"
-        ),
-      ]
-    ),
-  ]
-);
-
-// 🌱 Creating a React root and rendering the element into the DOM
-const root = ReactDOM.createRoot(document.getElementById("root"));
-
-// 🧩 Render the desired element structure into the root container
-// root.render(heading); // Uncomment this to render only the single heading
-root.render(parent);      // Currently rendering the nested element structure
+  <!-- 🚀 React Script -->
+  <script type="module" src="./App.js"></script>
+</body>
+</html>
