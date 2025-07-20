@@ -1,0 +1,88 @@
+/* Container styling */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  min-height: 100vh;
+}
+
+/* Card base style */
+.card {
+  width: 300px;
+  border: 2px solid #ccc;
+  padding: 15px;
+  background-color: white;
+  border-radius: 12px;
+  text-align: center;
+  margin: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Image inside card */
+.card img {
+  width: 100%;
+  height: auto; /* Keep image proportion */
+  object-fit: contain; /* Ensure the full image is shown */
+  border-radius: 10px;
+}
+.card p{
+    text-align: left;
+}
+.card p:nth-of-type(3) {
+  text-align: justify;
+}
+.card p:nth-of-type(4) {
+  color: rgb(64, 224, 64);
+}
+
+
+/* Hover effect on card */
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Optional card text elements for styling */
+.card h2 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.card p {
+  color: #555;
+  font-size: 0.95rem;
+  margin: 5px 0;
+}
+
+/* ----------- Media Queries for Responsiveness ----------- */
+
+/* Mobile (max 600px) */
+@media (max-width: 600px) {
+  .card {
+    width: 90%;
+  }
+
+  .container {
+    flex-direction: column;
+    padding: 10px;
+  }
+}
+
+/* Tablet (601px to 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+  .card {
+    width: 45%;
+  }
+}
+
+/* Desktop (901px and up) */
+@media (min-width: 901px) {
+  .card {
+    width: 300px;
+  }
+}
