@@ -1,0 +1,36 @@
+{
+  "name": "learn-react-js",
+  "version": "1.0.0",
+  "description": "This is learn React js by Rohit Maurya",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html --public-url ./",
+    "dev": "parcel index.html --open",
+    "watch": "parcel watch index.html",
+    "format": "prettier --write .",
+
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RohitMaurya139/learn-React-JS.git"
+  },
+  "keywords": [],
+  "author": "Rohit Maurya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RohitMaurya139/learn-React-JS/issues"
+  },
+  "homepage": "https://github.com/RohitMaurya139/learn-React-JS#readme",
+  "devDependencies": {
+    "parcel": "^2.15.4"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "browserslist": ["last 2 versions"]
+    
+
+  
+}
